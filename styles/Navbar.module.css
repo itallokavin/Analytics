@@ -1,5 +1,5 @@
 .nav{
-    background-color: #11101d;
+    background-color: #00985C;
     color: #fff;
     width: 200px;
     height: 100vh;
@@ -9,7 +9,7 @@
 
 .list{
     list-style: none;
-    padding: 0px 10px;
+    padding: 10px;
 }
 
 .logo{
@@ -17,17 +17,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgb(143, 143, 143);
+    border-bottom: 1px dotted #fff;
 }
 
-.categoryHome{
-    padding: 15px;
+.icon{
+    height: 18px;
+}
+
+.iconArrow{
+    height: 15px;
 }
 
 .category{
-    padding: 15px;
+    margin: 10px 0px;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    padding: 10px;
 }
 
-.category a{
-    font-size: 17px;
+.campIcon{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.campCategory{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: start;
+    align-items: center; 
+}
+
+.campCategory a{
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.campArrow{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
 }
