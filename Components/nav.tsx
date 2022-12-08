@@ -5,6 +5,8 @@ import Logo from '../assets/images/logo.png'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faClock} from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight} from '@fortawesome/free-solid-svg-icons'
+import { faRocket } from '@fortawesome/free-solid-svg-icons'
+import { faComment } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Navbar() {
@@ -48,6 +50,28 @@ export default function Navbar() {
                 />
               </div>
             </li>
+            <li className={style.category}>
+              <div className={style.campIcon}>
+                <FontAwesomeIcon 
+                  icon={faRocket}
+                  className={style.icon}
+                />
+              </div>
+              <div className={style.campCategory}>
+                <Link href="/">Apps</Link>
+              </div>
+            </li>
+            <li className={style.category}>
+              <div className={style.campIcon}>
+                <FontAwesomeIcon 
+                  icon={faComment}
+                  className={style.icon}
+                />
+              </div>
+              <div className={style.campCategory}>
+                <Link href="/">Contact</Link>
+              </div>
+            </li>            
         </ul>
       </div>
     )
