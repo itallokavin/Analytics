@@ -58,7 +58,7 @@ export default function Navbar() {
                 />
               </div>
               <div className={style.campCategory}>
-                <Link href="/">Apps</Link>
+                <Link href="/systems">Systems</Link>
               </div>
             </li>
             <li className={style.category}>
@@ -69,7 +69,7 @@ export default function Navbar() {
                 />
               </div>
               <div className={style.campCategory}>
-                <Link href="/">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </div>
             </li>            
         </ul>
