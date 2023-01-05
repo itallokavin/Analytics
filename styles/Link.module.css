@@ -1,0 +1,10 @@
+.menuItem{
+    text-align: start;
+    padding: 10px 19px;
+    font-size: 17px;
+    margin: 20px 0px;
+}
+
+.link:hover{
+    color: rgb(207, 206, 206);
+  }

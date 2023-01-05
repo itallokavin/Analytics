@@ -1,4 +1,4 @@
-import Navbar from "../Components/nav"
+import Navbar from "../Components/sidebar"
 import style from '../styles/Home.module.css'
 
 export default function Systems() {

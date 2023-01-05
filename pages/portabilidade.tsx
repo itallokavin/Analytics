@@ -1,4 +1,4 @@
-import Navbar from "../Components/nav"
+import Navbar from "../Components/sidebar"
 import style from '../styles/Home.module.css'
 
 export default function Logs() {
@@ -6,7 +6,7 @@ export default function Logs() {
     <div className={style.layout}>
       <Navbar />
       <div className={style.layout2}>
-        <h2>Logs</h2>
+        <h2>Portabilidade</h2>
       </div>
     </div>
   )
