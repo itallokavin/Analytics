@@ -1,12 +1,12 @@
-import Sidebar from "../Components/sidebar"
-import style from '../styles/Home.module.css'
+import style from '../styles/Layout.module.css'
+import Nav from '../Components/Sidebar/nav'
 
 export default function Home() {
   return (
     <div className={style.layout}>
-      <Sidebar />
+      <Nav />
       <div className={style.layout2}>
-        <h2>Home</h2>
+        <h2>Página Inicial</h2>
       </div>
     </div>
   )

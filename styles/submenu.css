@@ -1,0 +1,22 @@
+ul {
+    display: none;
+    list-style: none
+}
+ul.expanded {
+    display: block;
+}
+a {
+    display: block;
+}
+
+a.active{
+    font-weight: bold;
+}
+
+ul li a{
+    font-size: 15px;
+}
+
+ul li a:hover{
+    color: rgba(255, 255, 255, 0.705)
+}

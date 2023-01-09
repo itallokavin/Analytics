@@ -1,10 +1,10 @@
-import Navbar from "../Components/sidebar"
-import style from '../styles/Home.module.css'
+import style from '../styles/Layout.module.css'
+import Nav from '../Components/Sidebar/nav'
 
-export default function Logs() {
+export default function Portabilidade() {
   return (
     <div className={style.layout}>
-      <Navbar />
+      <Nav />
       <div className={style.layout2}>
         <h2>Portabilidade</h2>
       </div>
