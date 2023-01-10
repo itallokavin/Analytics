@@ -6,7 +6,7 @@ export default function Systems() {
     <div className={style.layout}>
       <Nav />
       <div className={style.layout2}>
-        <h2>Systems</h2>
+        <h2>Sistemas</h2>
       </div>
     </div>
   )

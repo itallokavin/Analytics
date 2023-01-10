@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Logo from '../../assets/images/logo.png'
 import SubMenu from './submenu'
 import { useRouter } from 'next/router'
-
+import Icon from '../Icons/Icons'
 
 export default function Nav(){
     const router = useRouter();
@@ -20,21 +20,22 @@ export default function Nav(){
                     />
                 </div>
                 <div className={style.menu}>
-                    <a className={style.option}  href="#" onClick={() => router.push('/')}>Home</a>
+                    <a className={style.option}  href="#" onClick={() => router.push('/')}><Icon icon='fa fa-home'/>Página Inicial</a>
                 </div>
-                <div className={style.menu}>   
+                <div className={style.menu}> 
                     <SubMenu 
                         title="Logs"
+                        titleIcon='fa-solid fa-clock-rotate-left'
                         items={[
                             {label: 'Portabilidade', url: '/portabilidade'},
                         ]}
                     />
                 </div>
                 <div className={style.menu}>
-                    <a className={style.option}  href="#" onClick={() => router.push('/systems')}>Systems</a>
+                    <a className={style.option}  href="#" onClick={() => router.push('/systems')}><Icon icon='fa-solid fa-microchip'/>Sistemas</a>
                 </div>
                 <div className={style.menu}>
-                    <a className={style.option}  href="#" onClick={() => router.push('/contact')}>Contact</a>
+                    <a className={style.option}  href="#" onClick={() => router.push('/contact')}><Icon icon='fa-solid fa-comment'/>Contato</a>
                 </div>
                 
             </div>

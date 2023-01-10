@@ -6,7 +6,7 @@ export default function Contact() {
     <div className={style.layout}>
       <Nav />
       <div className={style.layout2}>
-        <h2>Contact</h2>
+        <h2>Contato</h2>
       </div>
     </div>
   )

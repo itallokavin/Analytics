@@ -1,15 +1,18 @@
 import {useEffect, useState} from "react";
 import {useRouter} from 'next/router';
+import Icon from "../Icons/Icons";
 
 type Props = {
     title: string;
+    titleIcon?: string;
     items: { 
-        label: string; 
+        label: string;
+        icon?: string;
         url: string;
     }[];
 };
 
-export default function SubMenu({title, items}:Props){
+export default function SubMenu({title, items,titleIcon}:Props){
     const router = useRouter();
     const [collapsed, setCollapsed] = useState(true);
     const [activeUrl, setActiveUrl] = useState('');
@@ -22,8 +25,12 @@ export default function SubMenu({title, items}:Props){
     },[]);
 
     return(
-        <>
-            <a href="#" onClick={() => setCollapsed(!collapsed)}>{title}</a>
+        <> 
+            <a href="#" onClick={() => setCollapsed(!collapsed)}>
+                <Icon icon={titleIcon} />
+                {title}
+                <Icon id="after" icon={collapsed? "fa-solid fa-arrow-down": "fa-solid fa-xmark"} />
+            </a>
             <ul className={collapsed ? '' : 'expanded'}>
                 {items.map(item => (
                     <li key={item.url}>
@@ -36,6 +43,7 @@ export default function SubMenu({title, items}:Props){
                             }}
                             className={activeUrl === item.url? 'active' : ''}
                             >
+                            <Icon icon={item.icon} />
                             {item.label}
                         </a>
                     </li>
