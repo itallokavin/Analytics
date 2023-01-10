@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Logo from '../../assets/images/logo.png'
 import SubMenu from './submenu'
 import { useRouter } from 'next/router'
-import Icon from '../Icons/Icons'
+import Menu from './menu'
 
 export default function Nav(){
     const router = useRouter();
@@ -19,25 +19,31 @@ export default function Nav(){
                     alt='logo'        
                     />
                 </div>
-                <div className={style.menu}>
-                    <a className={style.option}  href="#" onClick={() => router.push('/')}><Icon icon='fa fa-home'/>Página Inicial</a>
-                </div>
-                <div className={style.menu}> 
-                    <SubMenu 
-                        title="Logs"
-                        titleIcon='fa-solid fa-clock-rotate-left'
-                        items={[
-                            {label: 'Portabilidade', url: '/portabilidade'},
-                        ]}
+                <Menu
+                    label='Página Inicial'
+                    icon='fa fa-home'
+                    url='/'
+                />
+                <SubMenu 
+                    title="Logs"
+                    titleIcon='fa-solid fa-clock-rotate-left'
+                    items={[
+                        {label: '2º via de Boletos', url: '/Logs/boleto'},
+                        {label: 'Extrato IRPF', url: '/Logs/extrato'},
+                        {label: 'Carta de Portabilidade', url: '/Logs/portabilidade'},
+                        {label: 'Canal do Prestador', url: '/Logs/prestador'},
+                    ]}
                     />
-                </div>
-                <div className={style.menu}>
-                    <a className={style.option}  href="#" onClick={() => router.push('/systems')}><Icon icon='fa-solid fa-microchip'/>Sistemas</a>
-                </div>
-                <div className={style.menu}>
-                    <a className={style.option}  href="#" onClick={() => router.push('/contact')}><Icon icon='fa-solid fa-comment'/>Contato</a>
-                </div>
-                
+                <Menu
+                    label='Sistemas'
+                    icon='fa-solid fa-microchip'
+                    url='/systems'
+                />
+                <Menu
+                    label='Contato'
+                    icon='fa-solid fa-comment'
+                    url='/contact'
+                />
             </div>
         </>
     )

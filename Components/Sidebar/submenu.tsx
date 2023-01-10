@@ -1,13 +1,13 @@
 import {useEffect, useState} from "react";
 import {useRouter} from 'next/router';
 import Icon from "../Icons/Icons";
+import style from '../../styles/Nav.module.css'
 
 type Props = {
     title: string;
     titleIcon?: string;
     items: { 
         label: string;
-        icon?: string;
         url: string;
     }[];
 };
@@ -26,29 +26,30 @@ export default function SubMenu({title, items,titleIcon}:Props){
 
     return(
         <> 
-            <a href="#" onClick={() => setCollapsed(!collapsed)}>
-                <Icon icon={titleIcon} />
-                {title}
-                <Icon id="after" icon={collapsed? "fa-solid fa-arrow-down": "fa-solid fa-xmark"} />
-            </a>
-            <ul className={collapsed ? '' : 'expanded'}>
-                {items.map(item => (
-                    <li key={item.url}>
-                        <a 
-                            href="#" 
-                            onClick={() => {
-                                setActiveUrl(item.url);
-                                setCollapsed(true);
-                                router.push(item.url);
-                            }}
-                            className={activeUrl === item.url? 'active' : ''}
-                            >
-                            <Icon icon={item.icon} />
-                            {item.label}
-                        </a>
-                    </li>
-                ))}
-            </ul>
+            <div className={style.menu}> 
+                <a href="#" onClick={() => setCollapsed(!collapsed)}>
+                    <Icon icon={titleIcon} />
+                    {title}
+                    <Icon id="after" icon={collapsed? "fa-solid fa-arrow-down": "fa-solid fa-xmark"} />
+                </a>
+                <ul className={collapsed ? '' : 'expanded'}>
+                    {items.map(item => (
+                        <li key={item.url}>
+                            <a 
+                                href="#" 
+                                onClick={() => {
+                                    setActiveUrl(item.url);
+                                    setCollapsed(true);
+                                    router.push(item.url);
+                                }}
+                                className={activeUrl === item.url? 'active' : ''}
+                                >
+                                {item.label}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </>
     )
 

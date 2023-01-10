@@ -1,5 +1,5 @@
-import style from '../styles/Layout.module.css'
-import Nav from '../Components/Sidebar/nav'
+import style from '../../styles/Layout.module.css'
+import Nav from '../../Components/Sidebar/nav'
 
 export default function Portabilidade() {
   return (
