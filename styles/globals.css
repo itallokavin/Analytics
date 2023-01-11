@@ -16,3 +16,7 @@ a{
   color: #fff;
   text-decoration: none;
 }
+
+a:hover{
+  color: rgb(233, 233, 233);
+}

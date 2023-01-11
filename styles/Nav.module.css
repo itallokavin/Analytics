@@ -2,7 +2,7 @@
     background-color: #00985C;
     color: #fff;
     width: 200px;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     float: left;
     box-shadow: 0 0 12px #000000;

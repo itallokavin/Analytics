@@ -12,12 +12,15 @@ export default function Nav(){
         <>
             <div className={style.nav}>
                 <div className={style.logo}>
-                    <Image
-                    src={Logo}
-                    height={80}
-                    width={160}
-                    alt='logo'        
-                    />
+                    <a href="/">
+                        <Image
+                        src={Logo}
+                        height={85}
+                        width={160}
+                        alt='logo'        
+                        />
+                    </a>
+                    
                 </div>
                 <Menu
                     label='Página Inicial'

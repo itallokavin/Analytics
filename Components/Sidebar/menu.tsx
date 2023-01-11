@@ -1,4 +1,5 @@
 import style from '../../styles/Nav.module.css'
+import { useEffect, useState} from "react";
 import {useRouter} from 'next/router';
 import Icon from '../Icons/Icons';
 import { url } from 'inspector';
@@ -11,10 +12,28 @@ type Props = {
 
 export default function Menu({label,icon,url}:Props){
     const router = useRouter();
+    const [activeUrl, setActiveUrl] = useState('');
+
+    useEffect(()=>{
+        if(url === router.pathname){
+            setActiveUrl(router.pathname);
+        }
+    },[]);
     return(
         <>
             <div className={style.menu}>
-                <a className={style.option}  href="#" onClick={() => router.push(url)}><Icon icon={icon}/>{label}</a>
+                <a   
+                    href="#" 
+                    onClick={() =>{ 
+                        router.push(url); 
+                        setActiveUrl(url);
+                    }}
+                    className={activeUrl === url? 'active' : ''}
+                    >
+                <Icon icon={icon}
+                />
+                {label}
+                </a>
             </div>
         </>
     )
