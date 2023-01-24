@@ -1,5 +1,6 @@
 import style from '../styles/Layout.module.css'
 import Nav from '../Components/Sidebar/nav'
+import Head from 'next/head'
 
 
 export default function Home() {

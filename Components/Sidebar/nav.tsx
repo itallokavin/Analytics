@@ -2,11 +2,9 @@ import style from '../../styles/Nav.module.css'
 import Image from 'next/image'
 import Logo from '../../assets/images/logo.png'
 import SubMenu from './submenu'
-import { useRouter } from 'next/router'
 import Menu from './menu'
 
 export default function Nav(){
-    const router = useRouter();
 
     return(
         <>
@@ -15,8 +13,8 @@ export default function Nav(){
                     <a href="/">
                         <Image
                         src={Logo}
-                        height={85}
-                        width={160}
+                        height={100}
+                        width={360}
                         alt='logo'        
                         />
                     </a>
@@ -28,24 +26,51 @@ export default function Nav(){
                     url='/'
                 />
                 <SubMenu 
-                    title="Logs"
-                    titleIcon='fa-solid fa-clock-rotate-left'
+                    title="Autorização"
+                    titleIcon='fa-solid fa-file-pen'
                     items={[
-                        {label: '2º via de Boletos', url: '/Logs/boleto'},
-                        {label: 'Extrato IRPF', url: '/Logs/extrato'},
-                        {label: 'Carta de Portabilidade', url: '/Logs/portabilidade'},
-                        {label: 'Canal do Prestador', url: '/Logs/prestador'},
+                        {label: 'Atendimentos', url: '/Autorizacao/atendimentos'},
+                        {label: 'Autorizações', url: '/Autorizacao/autorizacoes'},
+                        {label: 'Dashboard Intercâmbio', url: '/Autorizacao/intercambio'},
                     ]}
-                    />
-                <Menu
-                    label='Sistemas'
-                    icon='fa-solid fa-microchip'
-                    url='/systems'
                 />
-                <Menu
-                    label='Contato'
-                    icon='fa-solid fa-comment'
-                    url='/contact'
+                <SubMenu 
+                    title="Cadastro"
+                    titleIcon='fa-solid fa-user-pen'
+                    items={[
+                        {label: 'Relação de Ativos', url: '/Cadastro/ativos'},
+                    ]}
+                />
+                <SubMenu 
+                    title="Comercial"
+                    titleIcon='fa-sharp fa-solid fa-suitcase'
+                    items={[
+                        {label: 'Nova Comissão', url: '/Comercial/novacomissao'},
+                        {label: 'Painel Beneficiários', url: '/Comercial/beneficiarios'},
+                    ]}
+                />
+                <SubMenu 
+                    title="Contas Médicas"
+                    titleIcon='fa-solid fa-user-doctor'
+                    items={[
+                        {label: 'Produção Médica', url: '/ContasMedicas/producaomedica'},
+                        {label: 'Contas Médicas', url: '/ContasMedicas/contasmedicas'},
+                        {label: 'Previsão de Valores', url: '/ContasMedicas/previsaovalores'},
+                    ]}
+                />
+                <SubMenu 
+                    title="Credenciamento"
+                    titleIcon='fa-solid fa-id-card'
+                    items={[
+                        {label: 'Restrição de Prestadores', url: '/Credenciamento/restricaoprestadores'},
+                    ]}
+                />
+                <SubMenu 
+                    title="Sac"
+                    titleIcon='fa-solid fa-headset'
+                    items={[
+                        {label: 'Dashboard', url: '/Sac/dashboard'},
+                    ]}
                 />
             </div>
         </>

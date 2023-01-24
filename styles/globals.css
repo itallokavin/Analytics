@@ -15,8 +15,37 @@ html,body{
 a{
   color: #fff;
   text-decoration: none;
+  display: block;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
 }
 
+ul {
+  display: none;
+  list-style: none;
+}
+
+ul.expanded {
+  display: block;
+}
+
+a.active{
+  font-weight: bold;
+}
+
+ul li a{
+  font-size: 15px;
+  padding-left: 40px;
+  margin: 10px 0px 0px 10px;
+};
+
 a:hover{
-  color: rgb(233, 233, 233);
+  color: red;
+}
+
+.dashboard{
+  height: 100vh;
+  width: 100%;
+  padding: 50px;
 }
