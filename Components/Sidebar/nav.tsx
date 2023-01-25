@@ -10,15 +10,7 @@ export default function Nav(){
         <>
             <div className={style.nav}>
                 <div className={style.logo}>
-                    <a href="/">
-                        <Image
-                        src={Logo}
-                        height={100}
-                        width={360}
-                        alt='logo'        
-                        />
-                    </a>
-                    
+                    <h1 style={{fontSize:'45px',letterSpacing:'5px'}}>Logo</h1>
                 </div>
                 <Menu
                     label='Página Inicial'
