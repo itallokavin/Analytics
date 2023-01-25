@@ -1,8 +1,7 @@
 import style from '../../styles/Nav.module.css'
 import { useEffect, useState} from "react";
 import {useRouter} from 'next/router';
-import Icon from '../Icons/Icons';
-import { url } from 'inspector';
+import Icon from '../Icons/icons';
 
 type Props = {
     label: string;
