@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {useRouter} from 'next/router';
-import Icon from "../Icons/Icons";
+import Icon from "../Icons/icons";
 import style from '../../styles/Nav.module.css'
 
 type Props = {
